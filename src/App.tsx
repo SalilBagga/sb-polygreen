@@ -1,13 +1,27 @@
-import './App.css'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import './App.css';
+import routes from './routes';
+import Home from './features/Home';
+import AppLayout from './features/AppLayout';
 
 const App: React.FC = () => {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <AppLayout />,
+      children: [
+        {
+          path: routes.home,
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
   return (
     <div>
-      <h1 className="flex items-center justify-center text-4xl h-screen bg-red-500 text-white">
-        Vite Starter Pack by ProDoge
-      </h1>
+      <RouterProvider router={router} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
