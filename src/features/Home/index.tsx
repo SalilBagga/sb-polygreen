@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import HeroSection from './HeroSection';
+import Footer from '../Footer';
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <HeroSection />
+      <Footer />
+    </>
+  );
+};
 
-export default Home
+export default Home;
