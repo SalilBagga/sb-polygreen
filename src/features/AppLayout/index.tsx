@@ -5,7 +5,7 @@ import TopNavigation from '../TopNavigation';
 const AppLayout = () => {
   return (
     <>
-      {/* <TopNavigation /> */}
+      <TopNavigation />
       <div id="mainContent">
         <Outlet />
       </div>

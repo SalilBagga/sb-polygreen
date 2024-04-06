@@ -7,7 +7,7 @@ import WhyChooseUs from './WhyChooseUs';
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Revolutionizing />
       <WhyChooseUs />
       <Footer />
