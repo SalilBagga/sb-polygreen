@@ -3,10 +3,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/@/components/ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu';
 import { ChevronDown } from 'lucide-react';
-import { Button } from '../../@/components/ui/button';
-import Logo from '../../assets/Logo.webp';
+
+import Logo from 'assets/Logo.webp';
+import { Button } from '@/components/ui/button';
 
 const TopNavigation = () => {
   return (

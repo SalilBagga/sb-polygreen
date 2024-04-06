@@ -1,5 +1,5 @@
-import { Button } from '@/@/components/ui/button';
-import Logo from '../../assets/Logo.webp';
+import { Button } from '@/components/ui/button';
+import Logo from 'assets/Logo.webp';
 import { Facebook, Linkedin, LinkedinIcon, Mail, Map, MapPin, Phone, Twitter } from 'lucide-react';
 
 const pages = [
