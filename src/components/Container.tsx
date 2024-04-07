@@ -9,7 +9,7 @@ const Container = ({
   return (
     <div
       className={clsx('w-full mx-auto', className, {
-        'max-w-[1280px] md:px-40 sm:px-10 px-4': !fullWidth,
+        'max-w-[1280px] md:px-[120px] sm:px-10 px-4': !fullWidth,
       })}
     >
       {children}

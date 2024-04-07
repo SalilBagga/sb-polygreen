@@ -3,6 +3,7 @@ import './App.css';
 import routes from './routes';
 import Home from './features/Home';
 import AppLayout from './features/AppLayout';
+import AboutUs from 'features/AboutUs';
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const App: React.FC = () => {
         {
           path: routes.home,
           element: <Home />,
+        },
+        {
+          path: routes.aboutUs,
+          element: <AboutUs />,
         },
       ],
     },

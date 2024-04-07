@@ -10,6 +10,8 @@ import Logo from 'assets/Logo.webp';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import SliderNavigation, { SliderNavigationType } from './SliderNavigation';
+import { Link } from 'react-router-dom';
+import routes from 'routes';
 
 const data: SliderNavigationType = [
   { title: 'Home', link: '' },
@@ -24,7 +26,7 @@ const data: SliderNavigationType = [
     ],
   },
   { title: 'Infrastructure', link: '' },
-  { title: 'About Us', link: '' },
+  { title: 'About Us', link: routes.aboutUs },
   {
     title: 'Gallery',
     subMenu: [
@@ -70,7 +72,11 @@ const TopNavigation = () => {
                 </DropdownMenu>
               );
             }
-            return <Button variant="ghost">{item.title}</Button>;
+            return (
+              <Button asChild variant="ghost">
+                <Link to={item.link || ''}>{item.title}</Link>
+              </Button>
+            );
           })}
 
           <Button className="px-8 py-6 rounded-none">Inquire now</Button>
