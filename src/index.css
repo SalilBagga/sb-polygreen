@@ -87,3 +87,19 @@ h5 {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('assets/Fonts/Raleway.ttf') format('opentype');
+  font-weight: 400;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sanchez';
+  src: url('assets/Fonts/Sanchez.ttf') format('opentype');
+  font-weight: 400;
+  font-style: bold;
+  font-display: swap;
+}

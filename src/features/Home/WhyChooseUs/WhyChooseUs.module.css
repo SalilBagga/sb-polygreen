@@ -1,0 +1,40 @@
+.title {
+  font-family: Sanchez;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30.67px;
+}
+@media (min-width: theme('screens.md')) {
+  .title {
+    font-size: 32px;
+    line-height: 40.9px;
+  }
+}
+
+.subTitle {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.78px;
+}
+
+@media (min-width: theme('screens.md')) {
+  .subTitle {
+    font-family: Raleway;
+    font-size: 16px;
+  }
+}
+
+.cardTitle {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23.48px;
+}
+
+.cardSubtitle {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.78px;
+}

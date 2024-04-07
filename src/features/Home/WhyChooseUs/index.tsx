@@ -1,13 +1,13 @@
 import Container from 'components/Container';
-import React from 'react';
 import Card, { CardType } from './Card';
-import { LayoutGrid } from 'lucide-react';
+import Customer from './Svg/Customer';
+import Global from './Svg/Global';
 import Grid from './Svg/Grid';
 import Idea from './Svg/Idea';
-import Support from './Svg/Support';
-import Customer from './Svg/Customer';
 import Medal from './Svg/Medal';
-import Global from './Svg/Global';
+import Support from './Svg/Support';
+import style from './WhyChooseUs.module.css';
+import clsx from 'clsx';
 
 const WhyChooseUs = () => {
   const data: CardType[] = [
@@ -50,12 +50,8 @@ const WhyChooseUs = () => {
   ];
   return (
     <Container className="py-14">
-      <p className="mb-6 text-center text-[32px] font-normal leading-[40.9px] underline">
-        Why choose us?
-      </p>
-      <p className="mb-14 text-center text-base font-normal leading-[18.78px]">
-        Trustworthy irrigation solutons
-      </p>
+      <p className={clsx(style.title, 'mb-6 text-center underline')}>Why choose us?</p>
+      <p className={clsx(style.subTitle, 'mb-14 text-center')}>Trustworthy irrigation solutons</p>
 
       <div className="grid grid-cols-1 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-14">
         {data.map((item, index) => (

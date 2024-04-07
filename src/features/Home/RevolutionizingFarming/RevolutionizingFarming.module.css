@@ -1,0 +1,25 @@
+.title1 {
+  font-family: Sanchez;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.45px;
+}
+@media (min-width: theme('screens.md')) {
+  .title1 {
+    font-size: 32px;
+    line-height: 40.9px;
+  }
+}
+
+.years {
+  font-family: Sanchez;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30.67px;
+}
+@media (min-width: theme('screens.md')) {
+  .years {
+    font-size: 48px;
+    line-height: 61.34px;
+  }
+}

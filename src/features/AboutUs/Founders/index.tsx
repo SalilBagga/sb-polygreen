@@ -42,7 +42,6 @@ const Founders = () => {
         ))}
       </div>
       <div className="hidden md:block">
-        {/* <p className=''>FOUNDER</p> */}
         <div className="flex gap-6">
           <div>
             {data.map((item) => (
