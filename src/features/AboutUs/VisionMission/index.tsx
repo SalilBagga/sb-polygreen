@@ -2,13 +2,15 @@ import Container from 'components/Container';
 import React from 'react';
 import RicePlant from 'assets/VisionMission/RicePlant.webp';
 import Team from 'assets/VisionMission/Team.webp';
+import clsx from 'clsx';
+import style from './VisionMission.module.css';
 
 const VisionMission = () => {
   return (
     <Container className="py-14 grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-6">
       <div className="p-6 border-t-0 border-l-0 border-r-[1px] border-b-[2px] border-solid border-green-80 rounded-3xl h-fit">
-        <p className="text-center mb-6 text-green-90">Vision</p>
-        <p className="text-center mb-6">
+        <p className={clsx(style.cardTitle, 'text-center mb-6 text-green-90')}>Vision</p>
+        <p className={clsx(style.cardSubtitle, 'mb-6')}>
           SB Polygreen envisions maximizing sustainable irrigation across farming landscapes.
         </p>
         <div className="flex flex-col md:flex-row gap-5">
@@ -34,8 +36,8 @@ const VisionMission = () => {
       </div>
 
       <div className="p-6 border-t-0 border-l-0 border-r-[1px] border-b-[2px] border-solid border-green-80 rounded-3xl md:mt-[201px]">
-        <p className="text-center mb-6 text-green-90">Mission</p>
-        <p className="text-center mb-6">
+        <p className={clsx(style.cardTitle, 'text-center mb-6 text-green-90')}>Mission</p>
+        <p className={clsx(style.cardSubtitle, 'mb-6')}>
           Stand out as the premier manufacturer of top-quality and precise micro- irrigation
           products in India
         </p>

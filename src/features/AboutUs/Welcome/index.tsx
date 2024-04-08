@@ -1,10 +1,12 @@
 import React from 'react';
 import WelcomeImage from 'assets/Welcome/Welcome.webp';
 import Container from 'components/Container';
+import clsx from 'clsx';
+import style from './Welcome.module.css';
 
 const Welcome = () => {
   const para = (
-    <p className="text-black-130 whitespace-pre-wrap break-words">
+    <p className={clsx(style.subTitle, 'text-black-130 whitespace-pre-wrap break-words')}>
       Established in the year 2016, by Rahul Dahad and Viraj Palod, SB Polygreen is counted amongst
       the leading Manufacturers and Suppliers of innovative drip manufacturing solutions
       <br />
@@ -26,7 +28,12 @@ const Welcome = () => {
   return (
     <Container className="py-[72px] md:pt-[108px]">
       <div className="flex flex-col md:hidden">
-        <p className="text-green-90 mb-12 whitespace-pre-wrap break-words text-center">
+        <p
+          className={clsx(
+            style.title,
+            'text-green-90 mb-12 whitespace-pre-wrap break-words text-center'
+          )}
+        >
           Welcome to SB polygreen
         </p>
         <img
@@ -39,7 +46,7 @@ const Welcome = () => {
       <div className="hidden md:grid grid-cols-2 grid-rows-1 gap-6">
         <img src={WelcomeImage} alt="welcome-image" />
         <div>
-          <p className="text-green-90 mb-9">Welcome to SB polygreen</p>
+          <p className={clsx(style.title, 'text-green-90 mb-9')}>Welcome to SB polygreen</p>
           {para}
         </div>
       </div>

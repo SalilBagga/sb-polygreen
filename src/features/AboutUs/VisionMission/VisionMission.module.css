@@ -1,0 +1,21 @@
+.cardTitle {
+  font-family: Sanchez;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46.01px;
+}
+
+.cardSubtitle {
+  font-family: Sanchez;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.56px;
+  text-align: left;
+}
+@media (min-width: theme('screens.md')) {
+  .cardSubtitle {
+    font-size: 24px;
+    line-height: 30.67px;
+    text-align: center;
+  }
+}

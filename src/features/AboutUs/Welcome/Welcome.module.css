@@ -1,0 +1,20 @@
+.title {
+  font-family: Sanchez;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40.9px;
+}
+@media (min-width: theme('screens.md')) {
+  .title {
+    font-size: 48px;
+
+    line-height: 61.34px;
+  }
+}
+
+.subTitle {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.78px;
+}
