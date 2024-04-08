@@ -19,7 +19,7 @@ const VisionMission = () => {
             alt=""
             className="w-full object-cover md:object-contain max-h-[195px] rounded-3xl"
           />
-          <div className="">
+          <div className={style.description}>
             <p className="mb-6">Only 36.7% of land currently benefits from micro-irrigation.</p>
             <p className="text-black-130">
               By providing the{' '}
@@ -47,7 +47,7 @@ const VisionMission = () => {
             alt=""
             className="w-full object-cover md:object-contain max-h-[208px] rounded-3xl"
           />
-          <div>
+          <div className={style.description}>
             <p className="text-black-130">
               The success of each SB Polygreen employee is intertwined with the success of our
               customers. We are dedicated to{' '}
