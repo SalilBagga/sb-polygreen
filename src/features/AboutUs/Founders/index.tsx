@@ -4,6 +4,8 @@ import Rahul from 'assets/Founder/Rahul.webp';
 import RahulMini from 'assets/Founder/Rahul-mini.webp';
 import Viraj from 'assets/Founder/Viraj.webp';
 import VirajMini from 'assets/Founder/Viraj-mini.webp';
+import style from './Founders.module.css';
+import clsx from 'clsx';
 
 const data = [
   {
@@ -27,15 +29,19 @@ const Founders = () => {
         {data.map((item) => (
           <div className="mb-6">
             <div className="sm:hidden flex flex-col sm:flex-row">
-              <p className="text-green-90 mb-6">{item.name}</p>
+              <p className={clsx(style.name, 'text-green-90 mb-6')}>{item.name}</p>
               <img src={item.imgSmall} alt="" className="mb-6" />
-              <p className="whitespace-pre-wrap break-words">{item.description}</p>
+              <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
+                {item.description}
+              </p>
             </div>
             <div className="hidden sm:flex flex-row items-start gap-6">
               <img src={item.imgBig} alt="" className="object-contain max-w-[212px]" />
               <div>
-                <p className="text-green-90 mb-6">{item.name}</p>
-                <p className="whitespace-pre-wrap break-words">{item.description}</p>
+                <p className={clsx(style.name, 'text-green-90 mb-6')}>{item.name}</p>
+                <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
+                  {item.description}
+                </p>
               </div>
             </div>
           </div>
@@ -48,15 +54,10 @@ const Founders = () => {
               <div className="border-b-green-100 border-b border-solid flex gap-6 mb-6 items-end">
                 <img src={item.imgBig} alt="" className="shrink-0 object-contain max-w-[349px]" />
                 <div className="flex flex-col justify-end gap-16">
-                  <p>{item.description}</p>
-                  <p
-                    style={{
-                      fontFamily: 'Sanchez',
-                    }}
-                    className="text-8xl font-normal leading-[122.69px] text-left text-green-90"
-                  >
-                    {item.name}
+                  <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
+                    {item.description}
                   </p>
+                  <p className={clsx(style.name, 'text-left text-green-90')}>{item.name}</p>
                 </div>
               </div>
             ))}

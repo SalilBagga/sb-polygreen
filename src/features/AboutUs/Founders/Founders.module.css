@@ -1,0 +1,24 @@
+.about {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.78px;
+}
+.name {
+  font-family: Sanchez;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46.01px;
+}
+@media (min-width: theme('screens.sm')) {
+  .name {
+    font-size: 48px;
+    line-height: 61.34px;
+  }
+}
+@media (min-width: theme('screens.md')) {
+  .name {
+    font-size: 96px;
+    line-height: 122.69px;
+  }
+}
