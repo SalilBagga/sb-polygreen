@@ -12,18 +12,17 @@ import { useState } from 'react';
 import SliderNavigation, { SliderNavigationType } from './SliderNavigation';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
+import { PRODUCT_DATA } from 'features/Product/data';
 
 const data: SliderNavigationType = [
   { title: 'Home', link: '' },
 
   {
     title: 'Products',
-    subMenu: [
-      { title: 'Item 1', link: '' },
-      { title: 'Item 2', link: '' },
-      { title: 'Item 3', link: '' },
-      { title: 'Item 4', link: '' },
-    ],
+    subMenu: PRODUCT_DATA.map((item) => ({
+      title: item.name,
+      link: routes.productLink.replace(':productSlug', item.slug),
+    })),
   },
   { title: 'Infrastructure', link: '' },
   { title: 'About Us', link: routes.aboutUs },
@@ -66,7 +65,9 @@ const TopNavigation = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {item.subMenu.map((i, ind) => (
-                      <DropdownMenuItem key={i.title}>{i.title}</DropdownMenuItem>
+                      <DropdownMenuItem key={i.title}>
+                        <Link to={i.link || ''}>{i.title}</Link>
+                      </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
