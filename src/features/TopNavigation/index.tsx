@@ -52,7 +52,7 @@ const TopNavigation = () => {
             Sali Balaji Polygreen Industries
           </h1>
         </div>
-        <div className="gap-5 hidden md:flex items-center flex-wrap">
+        <div className="hidden lg:flex items-center flex-wrap">
           {data.map((item, index) => {
             if (item.subMenu) {
               return (
@@ -82,7 +82,7 @@ const TopNavigation = () => {
 
           <Button className="px-8 py-6 rounded-none">Inquire now</Button>
         </div>
-        <div className="gap-3 flex md:hidden items-center flex-wrap">
+        <div className="gap-3 flex lg:hidden items-center flex-wrap">
           <Button className="md:px-8 md:py-6 p-3.5 rounded-none">
             <span className="block">Inquire now</span>
           </Button>
