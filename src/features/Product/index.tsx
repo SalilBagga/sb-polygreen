@@ -1,16 +1,57 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { PRODUCT_DATA } from './data';
-import Container from 'components/Container';
 import { Button } from '@/components/ui/button';
-import Pipeline from './Pipeline';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import clsx from 'clsx';
+import Container from 'components/Container';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import Details from './Details';
+import MoreDetails from './MoreDetails';
+import style from './Product.module.css';
+import ProductCarousel from './ProductCarousel';
+import Sizes from './Sizes';
+import { PRODUCT_DATA, ProductDataType } from './data';
 
 const Product = () => {
   const { productSlug } = useParams();
+  const [currentSlug, setCurrentSlug] = useState(productSlug);
+  const [data, setData] = useState<ProductDataType | null | undefined>(null);
 
-  const data = PRODUCT_DATA.find((item) => item.slug === productSlug);
-  const dropDown = <span className="mb-12 block">drop down</span>;
+  const dropDown = (
+    <Select
+      onValueChange={(slug) => {
+        setCurrentSlug(slug);
+      }}
+    >
+      <SelectTrigger
+        className={clsx(
+          style.selectText,
+          'mb-12 rounded-none !border-t-0 border-x-0 border-2 border-[#B8D177] text-start focus:!outline-none focus:!shadow-none'
+        )}
+      >
+        <SelectValue placeholder="Select a product" />
+      </SelectTrigger>
+
+      <SelectContent onChange={() => {}}>
+        {PRODUCT_DATA.map((item) => (
+          <SelectItem className={style.selectText} value={item.slug}>
+            {item.name}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+
+  const Carousal = <ProductCarousel data={data?.images || []} />;
+  useEffect(() => {
+    const newData = PRODUCT_DATA.find((item) => item.slug === currentSlug);
+    setData(newData);
+  }, [currentSlug]);
 
   return (
     <Container className="md:py-[108px] py-6 ">
@@ -18,17 +59,26 @@ const Product = () => {
         <p className="text-base font-medium leading-[19.36px] mb-4 md:mb-12">
           Our products / {data?.name}
         </p>
-        <div className="block md:hidden mb-4">drop down</div>
+        <div className="block md:hidden mb-4">
+          {dropDown}
+          <ProductCarousel className="mb-12" data={data?.images || []} hideArrow />
+          <Sizes data={data?.size} className="mb-12 justify-center" />
+          <Details spacing="mb-12" data={data?.details} />
+          {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
+          <div>
+            <Button className="md:px-8 md:py-6 p-3.5 rounded-none mr-2">Inquire now</Button>
+            <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
+              Specifications
+            </Button>
+          </div>
+        </div>
         <div className="hidden md:grid grid-cols-2 grid-rows-1">
-          <div>bnhj</div>
+          <ProductCarousel data={data?.images || []} />
           <div className="flex flex-col">
             {dropDown}
-            <Sizes data={data?.size} spacing="mb-12" />
+            <Sizes data={data?.size} className="mb-12" />
             <Details spacing="mb-12" data={data?.details} />
-            <MoreDetails
-              spacing="mb-12"
-              details=" I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all"
-            />
+            {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
             <div>
               <Button className="md:px-8 md:py-6 p-3.5 rounded-none mr-2">Inquire now</Button>
               <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
@@ -41,59 +91,5 @@ const Product = () => {
     </Container>
   );
 };
-
-const Details = ({
-  spacing,
-  data,
-}: {
-  spacing?: string;
-  data?: {
-    name: string;
-    value: string;
-  }[];
-}) => (
-  <div className={clsx(spacing, 'flex flex-row md:flex-col gap-9 mb-12')}>
-    {data?.map((item) => (
-      <div className="flex gap-2 flex-row">
-        <div className="flex size-[32px] items-center justify-center border  border-solid border-green-40 shrink-0 rounded-full">
-          <Pipeline className="w-[12.52px] h-[9.39px]" />
-        </div>
-        <div className="flex flex-col">
-          <p className="md:mb-4 mb-3.5">{item.name}</p>
-          <p>{item.value}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-);
-
-const Sizes = ({
-  spacing,
-  data,
-  onClick,
-}: {
-  spacing?: string;
-  data?: string[];
-  onClick?: (item: String) => void;
-}) => (
-  <div className={clsx(spacing, 'flex flex-wrap gap-2 mb-12')}>
-    {data?.map((item) => (
-      <Button
-        onClick={() => {
-          if (onClick) onClick(item);
-        }}
-        className="bg-white border border-solid border-green-30 text-2xl font-medium leading-[29.05px] text-[#4D4D4D] focus:text-white focus:bg-green-100 hover:text-white hover:bg-green-100 shadow-[0px_1px_1px_0px_#B8D177]"
-      >
-        {item}
-      </Button>
-    ))}
-  </div>
-);
-const MoreDetails = ({ spacing, details }: { spacing?: string; details: string }) => (
-  <div className={spacing}>
-    <p className="mb-4">More information</p>
-    <p>{details}</p>
-  </div>
-);
 
 export default Product;

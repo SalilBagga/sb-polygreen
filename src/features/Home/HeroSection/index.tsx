@@ -1,10 +1,8 @@
-import Container from 'components/Container';
-import React from 'react';
-import Glider from 'react-glider';
-import 'glider-js/glider.min.css';
-import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
-import clsx from 'clsx';
 import Pipe from 'assets/HeroSection/pipe.webp';
+import clsx from 'clsx';
+import Container from 'components/Container';
+
+import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
 import Card from './Card';
 
 const data = [
@@ -26,65 +24,6 @@ const HeroSection = () => {
       <Container className="relative z-[1]">
         <p className="text-center">Our products</p>
         <div>
-          {/* <Glider
-            id="glider"
-            hasArrows
-            draggable={true}
-            slidesToShow={3.5}
-            slidesToScroll={1}
-            responsive={[
-              {
-                breakpoint: 3000,
-                settings: {
-                  slidesToShow: 3000 / 1000 + 1.5,
-                },
-              },
-              {
-                breakpoint: 2500,
-                settings: {
-                  slidesToShow: 2500 / 1000 + 1.5,
-                },
-              },
-              {
-                breakpoint: 2000,
-                settings: {
-                  slidesToShow: 4.1,
-                },
-              },
-              {
-                breakpoint: 1560,
-                settings: {
-                  slidesToShow: 3.1,
-                },
-              },
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 2,
-                },
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2.1,
-                },
-              },
-              {
-                breakpoint: 300,
-                settings: {
-                  slidesToShow: 1.1,
-                },
-              },
-            ]}
-            arrows={{
-              prev: '#buttonPrev',
-              next: '#buttonNext',
-            }}
-          >
-            {RESOURCES_DATA.map((resource, i) => (
-              <ResourceCard key={i} {...resource} />
-            ))}
-          </Glider> */}
           <Card />
           <div className="mt-2 hidden items-center md:flex">
             <button
