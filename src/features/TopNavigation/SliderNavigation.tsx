@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 type Option = { title: string; link?: string };
 
@@ -37,7 +38,9 @@ const SliderNavigation = ({
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {item.subMenu.map((i, ind) => (
-                      <DropdownMenuItem key={i.title}>{i.title}</DropdownMenuItem>
+                      <DropdownMenuItem key={i.title}>
+                        <Link to={i.link || ''}>{i.title}</Link>
+                      </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -45,7 +48,7 @@ const SliderNavigation = ({
             }
             return (
               <Button className="justify-start" variant="ghost">
-                {item.title}
+                <Link to={item.link || ''}>{item.title}</Link>
               </Button>
             );
           })}
