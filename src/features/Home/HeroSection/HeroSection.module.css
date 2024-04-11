@@ -1,0 +1,46 @@
+.title {
+  font-family: Raleway;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 56.35px;
+  text-align: center;
+  display: block;
+  margin-bottom: 24px;
+}
+
+@media (min-width: theme('screens.sm')) {
+  .title {
+    font-size: 48px;
+    line-height: 75.14px;
+  }
+}
+@media (min-width: theme('screens.md')) {
+  .title {
+    font-size: 64px;
+    line-height: 75.14px;
+  }
+}
+
+.description {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.78px;
+}
+@media (min-width: theme('screens.sm')) {
+  .description {
+    font-size: 20px;
+    line-height: 23.48px;
+  }
+}
+.name {
+  font-family: Raleway;
+  font-size: 24px;
+  line-height: 28.18px;
+}
+@media (min-width: theme('screens.sm')) {
+  .name {
+    font-size: 48px;
+    line-height: 56.35px;
+  }
+}

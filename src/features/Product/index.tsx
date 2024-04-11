@@ -47,7 +47,6 @@ const Product = () => {
     </Select>
   );
 
-  const Carousal = <ProductCarousel data={data?.images || []} />;
   useEffect(() => {
     const newData = PRODUCT_DATA.find((item) => item.slug === currentSlug);
     setData(newData);
