@@ -29,6 +29,7 @@ const Card = ({
     <div>
       <div className="flex gap-12 items-center mb-4 flex-col sm:flex-row flex-wrap justify-between">
         <img
+          loading="lazy"
           src={image}
           alt=""
           className="object-contain md:max-h-[318px] sm:max-h-[234px] max-h-[134px] mx-auto max-w-[440px]"

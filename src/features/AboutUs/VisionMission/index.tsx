@@ -15,6 +15,7 @@ const VisionMission = () => {
         </p>
         <div className="flex flex-col md:flex-row gap-5">
           <img
+            loading="lazy"
             src={RicePlant}
             alt=""
             className="w-full object-cover md:object-contain max-h-[195px] rounded-3xl"
@@ -43,6 +44,7 @@ const VisionMission = () => {
         </p>
         <div className="flex flex-col gap-5">
           <img
+            loading="lazy"
             src={Team}
             alt=""
             className="w-full object-cover md:object-contain max-h-[208px] rounded-3xl"

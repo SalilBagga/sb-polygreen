@@ -43,7 +43,12 @@ const TopNavigation = () => {
       <nav className="py-4 px-4 sm:px-12 bg-white flex justify-between items-center">
         <div className="flex items-center">
           <Link to={routes.home}>
-            <img src={Logo} alt="logo" className="w-[53px] h-[37px] sm:w-[91.43px] sm:h-16 mr-6" />
+            <img
+              loading="lazy"
+              src={Logo}
+              alt="logo"
+              className="w-[53px] h-[37px] sm:w-[91.43px] sm:h-16 mr-6"
+            />
           </Link>
           <h1 className="text-[32px] font-medium leading-[37.57px] text-left hidden md:inline-block">
             Sali Balaji Polygreen Industries

@@ -43,7 +43,7 @@ const ProductCarousel = ({
         <CarouselContent>
           {data.map((item, i) => (
             <CarouselItem>
-              <img src={item} alt={`image-${i}`} />
+              <img loading="lazy" src={item} alt={`image-${i}`} />
             </CarouselItem>
           ))}
         </CarouselContent>

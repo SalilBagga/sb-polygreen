@@ -30,13 +30,18 @@ const Founders = () => {
           <div className="mb-6">
             <div className="sm:hidden flex flex-col sm:flex-row">
               <p className={clsx(style.name, 'text-green-90 mb-6')}>{item.name}</p>
-              <img src={item.imgSmall} alt="" className="mb-6" />
+              <img loading="lazy" src={item.imgSmall} alt="" className="mb-6" />
               <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
                 {item.description}
               </p>
             </div>
             <div className="hidden sm:flex flex-row items-start gap-6">
-              <img src={item.imgBig} alt="" className="object-contain max-w-[212px]" />
+              <img
+                loading="lazy"
+                src={item.imgBig}
+                alt=""
+                className="object-contain max-w-[212px]"
+              />
               <div>
                 <p className={clsx(style.name, 'text-green-90 mb-6')}>{item.name}</p>
                 <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
@@ -52,7 +57,12 @@ const Founders = () => {
           <div>
             {data.map((item) => (
               <div className="border-b-green-100 border-b border-solid flex gap-6 mb-6 items-end">
-                <img src={item.imgBig} alt="" className="shrink-0 object-contain max-w-[349px]" />
+                <img
+                  loading="lazy"
+                  src={item.imgBig}
+                  alt=""
+                  className="shrink-0 object-contain max-w-[349px]"
+                />
                 <div className="flex flex-col justify-end gap-16">
                   <p className={clsx(style.about, 'whitespace-pre-wrap break-words')}>
                     {item.description}

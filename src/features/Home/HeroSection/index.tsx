@@ -8,6 +8,7 @@ const HeroSection = () => {
   return (
     <div className="relative overflow-hidden py-16">
       <img
+        loading="lazy"
         src={BackgroundImage}
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover"

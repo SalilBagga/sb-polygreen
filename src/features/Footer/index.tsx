@@ -51,7 +51,7 @@ const Footer = () => {
   return (
     <div className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(166,198,85,0.8239889705882353)_30%,rgba(166,198,85,1)_75%)] pb-20 pt-[120px] px-4 sm:px-6 md:px-[120px] flex flex-col md:flex-row gap-10 sm:gap-14">
       <div className="flex md:items-start items-center md:text-start text-center flex-col md:flex-row">
-        <img src={Logo} alt="logo" className="w-[149px] h-[104px] md:mr-4" />
+        <img loading="lazy" src={Logo} alt="logo" className="w-[149px] h-[104px] md:mr-4" />
         <p className="max-w-[420px] text-black-120">
           Your trusted source for innovative drip solutions Founded in 2016 by Rahul Dahad and Viraj
           Palod, SB Polygreen is your trusted source for innovative drip manufacturing solutions.

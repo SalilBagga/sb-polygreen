@@ -37,6 +37,7 @@ const Welcome = () => {
           Welcome to SB polygreen
         </p>
         <img
+          loading="lazy"
           src={WelcomeImage}
           alt="welcome-image"
           className="max-h-[250px] object-contain w-fit mx-auto"
@@ -44,7 +45,7 @@ const Welcome = () => {
         {para}
       </div>
       <div className="hidden md:grid grid-cols-2 grid-rows-1 gap-6">
-        <img src={WelcomeImage} alt="welcome-image" />
+        <img loading="lazy" src={WelcomeImage} alt="welcome-image" />
         <div>
           <p className={clsx(style.title, 'text-green-90 mb-9')}>Welcome to SB polygreen</p>
           {para}
