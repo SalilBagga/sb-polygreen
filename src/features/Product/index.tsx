@@ -10,12 +10,12 @@ import clsx from 'clsx';
 import Container from 'components/Container';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Details from './Details';
+import Details from './Sizes/Details';
 import MoreDetails from './MoreDetails';
 import style from './Product.module.css';
 import ProductCarousel from './ProductCarousel';
 import Sizes from './Sizes';
-import { PRODUCT_DATA, ProductDataType } from './data';
+import { PRODUCT_DATA, ProductDataType } from '../../utils/data';
 import InquireNowButton from 'components/InquireNowButton';
 
 const Product = () => {
@@ -66,15 +66,15 @@ const Product = () => {
         <div className="block md:hidden mb-4">
           {dropDown}
           <ProductCarousel className="mb-12" data={data?.images || []} hideArrow />
-          <Sizes data={data?.size} className="mb-12 justify-center" />
-          <Details spacing="mb-12" data={data?.details} />
+          <Sizes data={data?.sizes} className="mb-12 justify-center sm:justify-start" />
+
           {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
           <div>
             <InquireNowButton
               className="md:px-8 md:py-6 p-3.5 rounded-none mr-2"
               text={`Hi,\nI would like to enquire about ${data?.name}`}
             />
-            <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
+            <Button className="hover:text-white md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
               Specifications
             </Button>
           </div>
@@ -83,15 +83,15 @@ const Product = () => {
           <ProductCarousel data={data?.images || []} />
           <div className="flex flex-col">
             {dropDown}
-            <Sizes data={data?.size} className="mb-12" />
-            <Details spacing="mb-12" data={data?.details} />
+            <Sizes data={data?.sizes} className="mb-12" />
+
             {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
             <div>
               <InquireNowButton
                 className="md:px-8 md:py-6 p-3.5 rounded-none mr-2"
                 text={`Hi,\nI would like to enquire about ${data?.name}`}
               />
-              <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
+              <Button className="hover:text-white md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
                 Specifications
               </Button>
             </div>

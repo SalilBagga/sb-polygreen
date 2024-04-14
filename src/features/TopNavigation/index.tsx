@@ -12,7 +12,7 @@ import { useState } from 'react';
 import SliderNavigation, { SliderNavigationType } from './SliderNavigation';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
-import { PRODUCT_DATA } from 'features/Product/data';
+import { PRODUCT_DATA } from 'utils/data';
 import InquireNowButton from 'components/InquireNowButton';
 
 const data: SliderNavigationType = [
