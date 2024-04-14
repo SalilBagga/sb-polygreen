@@ -28,7 +28,7 @@ const data: SliderNavigationType = [
   { title: 'About Us', link: routes.aboutUs },
   {
     title: 'Gallery',
-    link: '',
+    link: routes.gallery,
   },
 ];
 const TopNavigation = () => {

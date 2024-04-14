@@ -5,15 +5,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button, buttonVariants } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 import InquireNowButton from 'components/InquireNowButton';
-import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type Option = { title: string; link?: string };

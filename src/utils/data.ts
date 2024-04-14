@@ -1,4 +1,3 @@
-import Pipe from 'assets/Products/pipe.webp';
 import FlatDrip1 from 'assets/Products/FlatDrip/flat-drip-1.webp';
 import FlatDrip2 from 'assets/Products/FlatDrip/flat-drip-2.webp';
 import FlatDrip3 from 'assets/Products/FlatDrip/flat-drip-3.webp';

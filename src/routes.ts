@@ -1,5 +1,6 @@
 export default {
   home: '/',
   aboutUs: '/about-us',
-  productLink:'/our-product/:productSlug'
+  productLink:'/our-product/:productSlug',
+  gallery:'/gallery'
 };

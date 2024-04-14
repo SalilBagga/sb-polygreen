@@ -1,11 +1,10 @@
 import { Button } from '@/components/ui/button';
-import Pipe from 'assets/HeroSection/pipe.webp';
 import clsx from 'clsx';
 import InquireNowButton from 'components/InquireNowButton';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
-import style from './HeroSection.module.css';
 import { ProductDataType } from 'utils/data';
+import style from './HeroSection.module.css';
 
 const Card = ({
   name = 'Submain Pipe',
