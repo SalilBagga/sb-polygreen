@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Logo from 'assets/Logo.webp';
-import { PRODUCT_DATA } from 'features/Product/data';
+import { PRODUCT_DATA } from 'utils/data';
 import {
   Facebook,
   Instagram,
@@ -49,7 +49,7 @@ const socials = [
 ];
 const Footer = () => {
   return (
-    <div className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(166,198,85,0.8239889705882353)_30%,rgba(166,198,85,1)_75%)] pb-20 pt-[120px] px-4 sm:px-6 md:px-[120px] flex flex-col md:flex-row gap-10 sm:gap-14">
+    <div className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(166,198,85,0.8239889705882353)_30%,rgba(166,198,85,1)_75%)] pb-20 pt-[120px] px-4 sm:px-6 md:px-[120px] flex flex-col md:flex-row gap-10 sm:gap-14 justify-between">
       <div className="flex md:items-start items-center md:text-start text-center flex-col md:flex-row">
         <img loading="lazy" src={Logo} alt="logo" className="w-[149px] h-[104px] md:mr-4" />
         <p className="max-w-[420px] text-black-120">

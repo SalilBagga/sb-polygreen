@@ -105,7 +105,7 @@ const HeroCarousel = () => {
           .map((item) => (
             <div
               className={clsx('transition-all rounded-full', {
-                'border border-solid border-green-40 bg-white-10  w-2 h-2 md:w-5 md:h-5':
+                'border border-solid border-green-40 bg-customWhite-10  w-2 h-2 md:w-5 md:h-5':
                   item !== current,
                 'bg-green-90 h-2 md:h-5 w-10': item === current,
               })}
