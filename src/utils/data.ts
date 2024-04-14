@@ -1,4 +1,12 @@
 import Pipe from 'assets/Products/pipe.webp';
+import FlatDrip1 from 'assets/Products/FlatDrip/flat-drip-1.webp';
+import FlatDrip2 from 'assets/Products/FlatDrip/flat-drip-2.webp';
+import FlatDrip3 from 'assets/Products/FlatDrip/flat-drip-3.webp';
+import RainPipe1 from 'assets/Products/RainPipe/rain-pipe-1.webp';
+import RainPipe2 from 'assets/Products/RainPipe/rain-pipe-2.webp';
+import RoundPipe from 'assets/Products/RoundPipe/round-pipe.webp';
+import SubmainPipe1 from 'assets/Products/SubmainPipe/submain-pipe-1.webp';
+import SubmainPipe2 from 'assets/Products/SubmainPipe/submain-pipe-2.webp';
 
 export type SizeDetailsType = 'thickness' | 'length' | 'discharge' | 'lay-length';
 export type ProductDataType = {
@@ -20,7 +28,7 @@ export const PRODUCT_DATA: ProductDataType[] = [
     name: 'Flat drip Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
-    images: [Pipe, Pipe, Pipe, Pipe, Pipe],
+    images: [FlatDrip1, FlatDrip2, FlatDrip3],
     sizes: [
       {
         name: '12 MM',
@@ -56,7 +64,7 @@ export const PRODUCT_DATA: ProductDataType[] = [
     name: 'Round Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
-    images: [Pipe, Pipe, Pipe, Pipe, Pipe],
+    images: [RoundPipe],
     sizes: [
       {
         name: '12 MM',
@@ -93,7 +101,7 @@ export const PRODUCT_DATA: ProductDataType[] = [
     name: 'Submain Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
-    images: [Pipe, Pipe, Pipe, Pipe, Pipe],
+    images: [SubmainPipe1, SubmainPipe2],
     sizes: [
       {
         name: '63 MM',
@@ -117,7 +125,7 @@ export const PRODUCT_DATA: ProductDataType[] = [
     name: 'Rain Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
-    images: [Pipe, Pipe, Pipe, Pipe, Pipe],
+    images: [RainPipe1, RainPipe2],
     sizes: [
       {
         name: '40 MM',
