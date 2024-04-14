@@ -1,4 +1,10 @@
-import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,26 +35,32 @@ const SliderNavigation = ({
           {data.map((item, index) => {
             if (item.subMenu) {
               return (
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="justify-start">
-                    <Button variant="ghost" className="mr-auto flex">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1" className="border-0">
+                    <AccordionTrigger
+                      className={buttonVariants({ variant: 'ghost', className: 'justify-between' })}
+                    >
                       {item.title}
-                      <ChevronDown className="w-4 h-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {item.subMenu.map((i, ind) => (
-                      <DropdownMenuItem key={i.title}>
-                        <Link to={i.link || ''}>{i.title}</Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-1 flex flex-col gap-2 pb-0 bg-green-20">
+                      {item.subMenu.map((item) => (
+                        <Button className="text-start" variant="ghost">
+                          <Link className="w-full" to={item.link || ''}>
+                            {item.title}
+                          </Link>
+                        </Button>
+                      ))}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               );
             }
+
             return (
-              <Button className="justify-start" variant="ghost">
-                <Link to={item.link || ''}>{item.title}</Link>
+              <Button className="text-start" variant="ghost">
+                <Link className="w-full" to={item.link || ''}>
+                  {item.title}
+                </Link>
               </Button>
             );
           })}

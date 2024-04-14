@@ -19,11 +19,12 @@ import { PRODUCT_DATA, ProductDataType } from './data';
 
 const Product = () => {
   const { productSlug } = useParams();
-  const [currentSlug, setCurrentSlug] = useState(productSlug);
+  const [currentSlug, setCurrentSlug] = useState<string | undefined>();
   const [data, setData] = useState<ProductDataType | null | undefined>(null);
 
   const dropDown = (
     <Select
+      value={currentSlug}
       onValueChange={(slug) => {
         setCurrentSlug(slug);
       }}
@@ -48,8 +49,14 @@ const Product = () => {
   );
 
   useEffect(() => {
-    const newData = PRODUCT_DATA.find((item) => item.slug === currentSlug);
-    setData(newData);
+    setCurrentSlug(productSlug);
+  }, [productSlug]);
+
+  useEffect(() => {
+    if (productSlug) {
+      const newData = PRODUCT_DATA.find((item) => item.slug === currentSlug);
+      setData(newData);
+    }
   }, [currentSlug]);
 
   return (

@@ -20,7 +20,7 @@ const data: SliderNavigationType = [
   {
     title: 'Products',
     subMenu: PRODUCT_DATA.map((item) => ({
-      title: item.name,
+      title: item.slug,
       link: routes.productLink.replace(':productSlug', item.slug),
     })),
   },
@@ -45,9 +45,11 @@ const TopNavigation = () => {
   return (
     <>
       <SliderNavigation open={openSheet} onClose={onToggle} data={data} />
-      <nav className="py-4 px-12 bg-white flex justify-between items-center">
+      <nav className="py-4 px-4 sm:px-12 bg-white flex justify-between items-center">
         <div className="flex items-center">
-          <img src={Logo} alt="logo" className="w-[53px] h-[37px] sm:w-[91.43px] sm:h-16 mr-6" />
+          <Link to={routes.home}>
+            <img src={Logo} alt="logo" className="w-[53px] h-[37px] sm:w-[91.43px] sm:h-16 mr-6" />
+          </Link>
           <h1 className="text-[32px] font-medium leading-[37.57px] text-left hidden md:inline-block">
             Sali Balaji Polygreen Industries
           </h1>

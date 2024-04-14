@@ -31,7 +31,7 @@ const Card = ({
         <img
           src={image}
           alt=""
-          className="object-contain md:max-h-[318px] sm:max-h-[234px] max-h-[134px] mx-auto"
+          className="object-contain md:max-h-[318px] sm:max-h-[234px] max-h-[134px] mx-auto max-w-[440px]"
         />
         <div className="p-8 shadow-[0px_0px_24px_0px_#F9FAF7] bg-[#FDFFFE99]/60 hidden md:block">
           <ul className="list-disc flex flex-col gap-3">
@@ -52,7 +52,7 @@ const Card = ({
         </Button>
       </div>
       <div className="p-8 shadow-[0px_0px_24px_0px_#F9FAF7] mt-4 bg-[#FDFFFE99]/60 block md:hidden">
-        <ul className="list-disc flex flex-col gap-3">
+        <ul className="list-disc flex flex-col gap-3 text-black-120">
           {description.map((item) => (
             <li className={style.description}>{item}</li>
           ))}
