@@ -19,6 +19,7 @@ export type ProductDataType = {
     name: string;
     details: { slug: SizeDetailsType; value: string }[];
   }[];
+  description?: string[];
 };
 
 export const PRODUCT_DATA: ProductDataType[] = [

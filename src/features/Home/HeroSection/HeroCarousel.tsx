@@ -6,70 +6,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import Pipe from 'assets/HeroSection/pipe.webp';
-import { useEffect, useState } from 'react';
-import Card, { CardType } from './Card';
 import clsx from 'clsx';
-
-const data: CardType[] = [
-  {
-    title: 'Flat-drip pipe',
-    image: Pipe,
-    description: [
-      'Cost-Effective:',
-      'Uniform discharge',
-      'Soil erosion',
-      'Weed reduction',
-      'Quick installation',
-      'Easy fertilizer application',
-    ],
-    slug: 'flat-drip-pipe',
-  },
-  {
-    title: 'Rain pipe',
-    image: Pipe,
-    description: [
-      '1Cost-Effective:',
-      '2Uniform discharge',
-      '3Soil erosion',
-      '4Weed reduction',
-      '5Quick installation',
-      '6Easy fertilizer application',
-    ],
-    slug: 'rain-pipe',
-  },
-  {
-    title: 'Hydrogol pipe',
-    image: Pipe,
-    description: [
-      '1Cost-Effective:',
-      '2Uniform discharge',
-      '3Soil erosion',
-      '4Weed reduction',
-      '5Quick installation',
-      '6Easy fertilizer application',
-    ],
-    slug: 'hydrogol-pipe',
-  },
-  {
-    title: 'Submain pipe',
-    image: Pipe,
-    description: [
-      '1Cost-Effective:',
-      '2Uniform discharge',
-      '3Soil erosion',
-      '4Weed reduction',
-      '5Quick installation',
-      '6Easy fertilizer application',
-    ],
-    slug: 'submain-pipe',
-  },
-];
+import { useEffect, useState } from 'react';
+import { PRODUCT_DATA } from 'utils/data';
+import Card from './Card';
 
 const HeroCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const data = PRODUCT_DATA.filter((item) => item.isHeroProduct);
 
   useEffect(() => {
     if (!api) {

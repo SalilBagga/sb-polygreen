@@ -5,16 +5,11 @@ import InquireNowButton from 'components/InquireNowButton';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
 import style from './HeroSection.module.css';
+import { ProductDataType } from 'utils/data';
 
-export type CardType = {
-  title: string;
-  image: string;
-  description: string[];
-  slug: string;
-};
 const Card = ({
-  title = 'Submain Pipe',
-  image = Pipe,
+  name = 'Submain Pipe',
+  images,
   description = [
     'Cost-Effective:',
     'Uniform discharge',
@@ -24,13 +19,13 @@ const Card = ({
     'Easy fertilizer application',
   ],
   slug,
-}: CardType) => {
+}: ProductDataType) => {
   return (
     <div>
       <div className="flex gap-12 items-center mb-4 flex-col sm:flex-row flex-wrap justify-between">
         <img
           loading="lazy"
-          src={image}
+          src={images[0]}
           alt=""
           className="object-contain md:max-h-[318px] sm:max-h-[234px] max-h-[134px] mx-auto max-w-[440px]"
         />
@@ -43,13 +38,13 @@ const Card = ({
         </div>
       </div>
       <div className="px-4 mx-auto w-fit mb-4">
-        <span className={clsx(style.name, 'mb-2 block')}>{title}</span>
+        <span className={clsx(style.name, 'mb-2 block')}>{name}</span>
         <hr className="w-full border-[1.5px] border-green-90 rounded-full" />
       </div>
       <div className="mx-auto w-fit ">
         <InquireNowButton
           className="md:px-8 md:py-6 p-3.5 rounded-none mr-2"
-          text={`Hi,\nI would like to enquire about ${title}`}
+          text={`Hi,\nI would like to enquire about ${name}`}
         />
 
         <Button
