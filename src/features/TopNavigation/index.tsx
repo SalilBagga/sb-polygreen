@@ -13,6 +13,7 @@ import SliderNavigation, { SliderNavigationType } from './SliderNavigation';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
 import { PRODUCT_DATA } from 'features/Product/data';
+import InquireNowButton from 'components/InquireNowButton';
 
 const data: SliderNavigationType = [
   { title: 'Home', link: '' },
@@ -20,20 +21,14 @@ const data: SliderNavigationType = [
   {
     title: 'Products',
     subMenu: PRODUCT_DATA.map((item) => ({
-      title: item.slug,
+      title: item.name,
       link: routes.productLink.replace(':productSlug', item.slug),
     })),
   },
-  { title: 'Infrastructure', link: '' },
   { title: 'About Us', link: routes.aboutUs },
   {
     title: 'Gallery',
-    subMenu: [
-      { title: 'Item 1', link: '' },
-      { title: 'Item 2', link: '' },
-      { title: 'Item 3', link: '' },
-      { title: 'Item 4', link: '' },
-    ],
+    link: '',
   },
 ];
 const TopNavigation = () => {
@@ -81,13 +76,10 @@ const TopNavigation = () => {
               </Button>
             );
           })}
-
-          <Button className="px-8 py-6 rounded-none">Inquire now</Button>
+          <InquireNowButton className="px-8 py-6 md:ml-2 rounded-none" />
         </div>
         <div className="gap-3 flex lg:hidden items-center flex-wrap">
-          <Button className="md:px-8 md:py-6 p-3.5 rounded-none">
-            <span className="block">Inquire now</span>
-          </Button>
+          <InquireNowButton className="md:px-8 md:py-6 p-3.5 rounded-none" />
 
           <Button variant="ghost" className="p-0" onClick={onToggle}>
             <Menu className="h-6 w-8" />

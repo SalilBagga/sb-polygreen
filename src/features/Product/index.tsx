@@ -16,6 +16,7 @@ import style from './Product.module.css';
 import ProductCarousel from './ProductCarousel';
 import Sizes from './Sizes';
 import { PRODUCT_DATA, ProductDataType } from './data';
+import InquireNowButton from 'components/InquireNowButton';
 
 const Product = () => {
   const { productSlug } = useParams();
@@ -62,9 +63,6 @@ const Product = () => {
   return (
     <Container className="md:py-[108px] py-6 ">
       <div>
-        <p className="text-base font-medium leading-[19.36px] mb-4 md:mb-12">
-          Our products / {data?.name}
-        </p>
         <div className="block md:hidden mb-4">
           {dropDown}
           <ProductCarousel className="mb-12" data={data?.images || []} hideArrow />
@@ -72,7 +70,10 @@ const Product = () => {
           <Details spacing="mb-12" data={data?.details} />
           {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
           <div>
-            <Button className="md:px-8 md:py-6 p-3.5 rounded-none mr-2">Inquire now</Button>
+            <InquireNowButton
+              className="md:px-8 md:py-6 p-3.5 rounded-none mr-2"
+              text={`Hi,\nI would like to enquire about ${data?.name}`}
+            />
             <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
               Specifications
             </Button>
@@ -86,7 +87,10 @@ const Product = () => {
             <Details spacing="mb-12" data={data?.details} />
             {data?.moreInfo && <MoreDetails spacing="mb-12" details={data.moreInfo} />}
             <div>
-              <Button className="md:px-8 md:py-6 p-3.5 rounded-none mr-2">Inquire now</Button>
+              <InquireNowButton
+                className="md:px-8 md:py-6 p-3.5 rounded-none mr-2"
+                text={`Hi,\nI would like to enquire about ${data?.name}`}
+              />
               <Button className="md:px-8 md:py-6 p-3.5 rounded-none border border-solid border-green-100 bg-white text-black">
                 Specifications
               </Button>

@@ -13,7 +13,7 @@ import clsx from 'clsx';
 
 const data: CardType[] = [
   {
-    title: 'Submain Pipe',
+    title: 'Flat-drip pipe',
     image: Pipe,
     description: [
       'Cost-Effective:',
@@ -23,9 +23,10 @@ const data: CardType[] = [
       'Quick installation',
       'Easy fertilizer application',
     ],
+    slug: 'flat-drip-pipe',
   },
   {
-    title: 'Submain Pipe1',
+    title: 'Rain pipe',
     image: Pipe,
     description: [
       '1Cost-Effective:',
@@ -35,6 +36,33 @@ const data: CardType[] = [
       '5Quick installation',
       '6Easy fertilizer application',
     ],
+    slug: 'rain-pipe',
+  },
+  {
+    title: 'Hydrogol pipe',
+    image: Pipe,
+    description: [
+      '1Cost-Effective:',
+      '2Uniform discharge',
+      '3Soil erosion',
+      '4Weed reduction',
+      '5Quick installation',
+      '6Easy fertilizer application',
+    ],
+    slug: 'hydrogol-pipe',
+  },
+  {
+    title: 'Submain pipe',
+    image: Pipe,
+    description: [
+      '1Cost-Effective:',
+      '2Uniform discharge',
+      '3Soil erosion',
+      '4Weed reduction',
+      '5Quick installation',
+      '6Easy fertilizer application',
+    ],
+    slug: 'submain-pipe',
   },
 ];
 

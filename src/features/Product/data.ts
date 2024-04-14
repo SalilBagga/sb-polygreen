@@ -13,8 +13,8 @@ export type ProductDataType = {
 };
 export const PRODUCT_DATA: ProductDataType[] = [
   {
-    slug: 'submain-pipe',
-    name: 'Submain pipe',
+    slug: 'flat-drip-pipe',
+    name: 'Flat drip pipe',
     size: ['63MM', '73MM'],
     images: [Pipe, Pipe, Pipe, Pipe, Pipe],
     details: [

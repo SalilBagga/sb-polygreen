@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
+import InquireNowButton from 'components/InquireNowButton';
 import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -65,7 +66,7 @@ const SliderNavigation = ({
             );
           })}
         </div>
-        <Button className="px-8 py-6 rounded-none w-full">Inquire now</Button>
+        <InquireNowButton className="px-8 py-6 rounded-none w-full" />
       </SheetContent>
     </Sheet>
   );

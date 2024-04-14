@@ -1,11 +1,8 @@
-import clsx from 'clsx';
-import Container from 'components/Container';
 import BackgroundImage from 'assets/HeroSection/background.webp';
+import Container from 'components/Container';
 
-import { ArrowLeftCircle, ArrowRightCircle } from 'lucide-react';
-import Card from './Card';
-import style from './HeroSection.module.css';
 import HeroCarousel from './HeroCarousel';
+import style from './HeroSection.module.css';
 
 const HeroSection = () => {
   return (
