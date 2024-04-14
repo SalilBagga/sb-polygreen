@@ -1,0 +1,14 @@
+.title {
+  font-family: Sanchez;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46.01px;
+  text-align: left;
+  color: theme('colors.green.90');
+}
+@media (min-width: theme('screens.sm')) {
+  .title {
+    font-size: 48px;
+    line-height: 61.34px;
+  }
+}
