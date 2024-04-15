@@ -15,7 +15,9 @@ const HeroCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const data = PRODUCT_DATA.filter((item) => item.isHeroProduct);
+  const data = PRODUCT_DATA.filter((item) => item.isHeroProduct).sort(
+    (a, b) => (a.order || 0) - (b.order || 0)
+  );
 
   useEffect(() => {
     if (!api) {

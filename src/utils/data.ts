@@ -19,10 +19,12 @@ export type ProductDataType = {
     details: { slug: SizeDetailsType; value: string }[];
   }[];
   description?: string[];
+  order?: number;
 };
 
 export const PRODUCT_DATA: ProductDataType[] = [
   {
+    order:1,
     isHeroProduct: true,
     slug: 'flat-drip-pipe',
     name: 'Flat drip Pipe',
@@ -96,6 +98,7 @@ export const PRODUCT_DATA: ProductDataType[] = [
     ],
   },
   {
+    order:4,
     isHeroProduct: true,
     slug: 'submain-pipe',
     name: 'Submain Pipe',
@@ -120,9 +123,42 @@ export const PRODUCT_DATA: ProductDataType[] = [
     ],
   },
   {
+    order:2,
     isHeroProduct: true,
     slug: 'rain-pipe',
     name: 'Rain Pipe',
+    moreInfo:
+      'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
+    images: [RainPipe1, RainPipe2],
+    sizes: [
+      {
+        name: '40 MM',
+        details: [
+          { slug: 'thickness', value: '300 Micron' },
+          { slug: 'length', value: '100 Meter' },
+        ],
+      },
+      {
+        name: '63 MM',
+        details: [
+          { slug: 'thickness', value: '350 Micron' },
+          { slug: 'length', value: '100 Meter' },
+        ],
+      },
+      {
+        name: '75 MM',
+        details: [
+          { slug: 'thickness', value: '350 Micron' },
+          { slug: 'length', value: '100 Meter' },
+        ],
+      },
+    ],
+  },
+  {
+    order:3,
+    isHeroProduct: true,
+    slug: 'hydrogol-pipe',
+    name: 'Hydrogol Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
     images: [RainPipe1, RainPipe2],

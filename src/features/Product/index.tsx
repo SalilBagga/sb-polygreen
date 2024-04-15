@@ -8,17 +8,18 @@ import {
 } from '@/components/ui/select';
 import clsx from 'clsx';
 import Container from 'components/Container';
+import InquireNowButton from 'components/InquireNowButton';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import Details from './Sizes/Details';
+import { useNavigate, useParams } from 'react-router-dom';
+import routes from 'routes';
+import { PRODUCT_DATA, ProductDataType } from '../../utils/data';
 import MoreDetails from './MoreDetails';
 import style from './Product.module.css';
 import ProductCarousel from './ProductCarousel';
 import Sizes from './Sizes';
-import { PRODUCT_DATA, ProductDataType } from '../../utils/data';
-import InquireNowButton from 'components/InquireNowButton';
 
 const Product = () => {
+  const navigate = useNavigate();
   const { productSlug } = useParams();
   const [currentSlug, setCurrentSlug] = useState<string | undefined>();
   const [data, setData] = useState<ProductDataType | null | undefined>(null);
@@ -27,7 +28,7 @@ const Product = () => {
     <Select
       value={currentSlug}
       onValueChange={(slug) => {
-        setCurrentSlug(slug);
+        navigate(routes.productLink.replace(':productSlug', slug));
       }}
     >
       <SelectTrigger

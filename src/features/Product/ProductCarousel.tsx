@@ -47,16 +47,15 @@ const ProductCarousel = ({
             </CarouselItem>
           ))}
         </CarouselContent>
-        {!hideArrow && (
+        {!hideArrow && data.length > 1 && (
           <>
-            {' '}
             <CarouselPrevious />
             <CarouselNext />
           </>
         )}
       </Carousel>
       <div className="flex gap-2 justify-center items-center">
-        {Array(count)
+        {Array(data.length)
           .fill(0)
           .map((_, index) => index + 1)
           .map((item) => (
