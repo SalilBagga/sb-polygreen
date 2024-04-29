@@ -51,7 +51,7 @@ const TopNavigation = () => {
             />
           </Link>
           <h1 className="text-[32px] font-medium leading-[37.57px] text-left hidden md:inline-block">
-            Sali Balaji Polygreen Industries
+            Saii Balaji Polygreen Industries
           </h1>
         </div>
         <div className="hidden lg:flex items-center flex-wrap">

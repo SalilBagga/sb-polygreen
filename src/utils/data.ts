@@ -24,12 +24,23 @@ export type ProductDataType = {
 
 export const PRODUCT_DATA: ProductDataType[] = [
   {
-    order:1,
+    order: 1,
     isHeroProduct: true,
     slug: 'flat-drip-pipe',
     name: 'Flat drip Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
+    description: [
+      '💧 Uniform Discharge',
+
+      '🌱 Soil Erosion Prevention',
+
+      '🚫 Weed Reduction',
+
+      '⏱️ Quick Installation',
+
+      '🌿 Fertilizer Application Made Easy',
+    ],
     images: [FlatDrip1, FlatDrip2, FlatDrip3],
     sizes: [
       {
@@ -98,10 +109,17 @@ export const PRODUCT_DATA: ProductDataType[] = [
     ],
   },
   {
-    order:4,
+    order: 4,
     isHeroProduct: true,
     slug: 'submain-pipe',
     name: 'Submain Pipe',
+    description: [
+      '🔄 PVC Pipe Replacement',
+      '💰 50% Cost Saving',
+      '💧 Easy Water Transport',
+      '🛡️ Durable, Long Life',
+      '🔧 Easy Installation',
+    ],
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
     images: [SubmainPipe1, SubmainPipe2],
@@ -123,13 +141,21 @@ export const PRODUCT_DATA: ProductDataType[] = [
     ],
   },
   {
-    order:2,
+    order: 2,
     isHeroProduct: true,
     slug: 'rain-pipe',
     name: 'Rain Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
     images: [RainPipe1, RainPipe2],
+    description: [
+      '💧 Low-Cost Irrigation',
+      '🌊 60% Water Saving',
+      '⏰ Time and Labor Saving',
+      '💡 Electricity Savings',
+      '🔧 Easy Installation',
+      '🐜 Insect Control',
+    ],
     sizes: [
       {
         name: '40 MM',
@@ -155,12 +181,20 @@ export const PRODUCT_DATA: ProductDataType[] = [
     ],
   },
   {
-    order:3,
+    order: 3,
     isHeroProduct: true,
     slug: 'hydrogol-pipe',
     name: 'Hydrogol Pipe',
     moreInfo:
       'I just wanted to share a quick note and let you guys know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
+    description: [
+      '🛡️ Durable',
+      '💰 Best Return on Investment',
+      '💧 Optimum Irrigation',
+      '🌿 Weed Reduction',
+      '⏰ Time and Labor Saving',
+      '🌱 Easy Fertilizer Application',
+    ],
     images: [RainPipe1, RainPipe2],
     sizes: [
       {
